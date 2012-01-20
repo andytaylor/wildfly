@@ -114,14 +114,6 @@ public final class ResourceAdapterActivatorService extends AbstractResourceAdapt
         DEPLOYMENT_CONNECTOR_LOGGER.debugf("Started service %s", ConnectorServices.RESOURCE_ADAPTER_ACTIVATOR_SERVICE);
     }
 
-    /**
-     * Stop
-     */
-    @Override
-    public void stop(StopContext context) {
-        DEPLOYMENT_CONNECTOR_LOGGER.debugf("Stopping service %s", ConnectorServices.RESOURCE_ADAPTER_ACTIVATOR_SERVICE);
-    }
-
     public CommonDeployment getDeploymentMD() {
         return deploymentMD;
     }
