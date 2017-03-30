@@ -98,7 +98,6 @@
         </replacement>
         <replacement placeholder="CLUSTER-CONNECTIONS">
                 <cluster-connection name="my-cluster"
-                                    address="jms"
                                     connector-name="http-connector"
                                     discovery-group="dg-group1" />
         </replacement>

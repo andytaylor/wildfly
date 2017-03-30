@@ -47,7 +47,6 @@
                              jgroups-channel="activemq-cluster"/>
 
             <cluster-connection name="my-cluster"
-                                address="jms"
                                 connector-name="http-connector"
                                 discovery-group="dg-group1" />
 
@@ -100,7 +99,7 @@
                              jgroups-channel="activemq-cluster"/>
 
             <cluster-connection name="my-cluster"
-                                address="jms"
+                                address=""
                                 connector-name="http-connector-backup"
                                 discovery-group="dg-group1" />
         </server>

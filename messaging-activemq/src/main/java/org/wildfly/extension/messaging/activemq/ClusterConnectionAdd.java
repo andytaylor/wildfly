@@ -86,7 +86,8 @@ public class ClusterConnectionAdd extends AbstractAddStepHandler {
 
     static ClusterConnectionConfiguration createClusterConnectionConfiguration(final OperationContext context, final String name, final ModelNode model) throws OperationFailedException {
 
-        final String address = ClusterConnectionDefinition.ADDRESS.resolveModelAttribute(context, model).asString();
+        ModelNode addressModelNode = ClusterConnectionDefinition.ADDRESS.resolveModelAttribute(context, model);
+        final String address = addressModelNode.isDefined() ? addressModelNode.asString() : null;
         final String connectorName = ClusterConnectionDefinition.CONNECTOR_NAME.resolveModelAttribute(context, model).asString();
         final long retryInterval = ClusterConnectionDefinition.RETRY_INTERVAL.resolveModelAttribute(context, model).asLong();
         final boolean duplicateDetection = ClusterConnectionDefinition.USE_DUPLICATE_DETECTION.resolveModelAttribute(context, model).asBoolean();

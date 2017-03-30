@@ -73,6 +73,7 @@ public class ClusterConnectionDefinition extends PersistentResourceDefinition {
     public static final SimpleAttributeDefinition ADDRESS = create("cluster-connection-address", STRING)
             .setXmlName(CommonAttributes.ADDRESS)
             .setDefaultValue(null)
+            .setRequired(false)
             .setAllowExpression(true)
             .setRestartAllServices()
             .build();
